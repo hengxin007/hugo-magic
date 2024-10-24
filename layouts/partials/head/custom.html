@@ -12,7 +12,8 @@
 {{ if .Site.Params.showScrollToTopButton }}
     {{ partial "scroll-to-top.html" . }}
 {{ end }}
-<script src="/js/tiaozhuan.js"></script>
+<!-- 自定义跳转页面 -->
+<!-- <script src="/js/tiaozhuan.js"></script> -->
 <!-- umami -->
 <!-- 51.la -->
 <link rel="preconnect" href="//sdk.51.la">
@@ -44,3 +45,9 @@
   };
 </script>
 <script defer src="/js/flying-pages.min.js"></script>
+<!-- FancyBox 灯箱 -->
+{{if .Page.Site.Params.fancybox }}
+<script src="/js/jquery.min.3.5.1.js"></script>
+<link rel="stylesheet" href="/css/jquery.fancybox.min.css" />
+<script src="/js/jquery.fancybox.min.js"></script>
+{{ end }}
